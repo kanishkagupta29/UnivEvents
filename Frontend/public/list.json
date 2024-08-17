@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "heading": "BLACK FRIDAY DEAL",
+      "imgSrc": "https://placehold.it/150x80?text=IMAGE",
+      "name": "Event Name 1",
+      "date": "2024-11-29",
+      "description": "Description of Event 1"
+    },
+    {
+      "id": 2,
+      "heading": "SUMMER SALE",
+      "imgSrc": "https://placehold.it/150x80?text=IMAGE",
+      "name": "Event Name 2",
+      "date": "2024-06-15",
+      "description": "Description of Event 2"
+    },
+    {
+      "id": 3,
+      "heading": "WINTER WONDERLAND",
+      "imgSrc": "https://placehold.it/150x80?text=IMAGE",
+      "name": "Event Name 3",
+      "date": "2024-12-25",
+      "description": "Description of Event 3"
+    },
+    {
+      "id": 4,
+      "heading": "SPRING FLING",
+      "imgSrc": "https://placehold.it/150x80?text=IMAGE",
+      "name": "Event Name 4",
+      "date": "2024-03-21",
+      "description": "Description of Event 4"
+    },
+    {
+      "id": 5,
+      "heading": "HALLOWEEN SPOOKTACULAR",
+      "imgSrc": "https://placehold.it/150x80?text=IMAGE",
+      "name": "Event Name 5",
+      "date": "2024-10-31",
+      "description": "Description of Event 5"
+    }
+  ]
+  
