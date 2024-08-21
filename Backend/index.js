@@ -38,6 +38,17 @@ app.get("/event/:id",async(req,res)=>{
     const result=await Events.findOne({_id:req.params.id}).exec();
     res.status(200).json(result);
 })
+app.get("/events/:category", async (req, res) => {
+    try {
+        console.log(req.params.category);
+        const result = await Events.find({ category: req.params.category }).exec();
+        res.status(200).json(result);
+    } catch (error) {
+        console.error("Error fetching events by category:", error);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
+});
+
 
 // Search route
 app.get("/search", async (req, res) => {

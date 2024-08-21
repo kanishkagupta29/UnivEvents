@@ -1,34 +1,44 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import Navbarscroll from "./Navbarscroll";
 import Footer from "./Footer";
+// import './Styles.css';
 
 export default function SearchResults() {
     const [results, setResults] = useState([]);
     const location = useLocation();
+    const { category } = useParams(); // Get the category from the URL params
 
     useEffect(() => {
-        const query = new URLSearchParams(location.search).get("query");
-
-        const fetchResults = async () => {
+        const fetchData = async () => {
             try {
-                const response = await axios.get(
-                    "http://localhost:8080/search",
-                    {
-                        params: { query },
+                if (category) {
+                    // Fetch specific event by category
+                    const response = await axios.get(`http://localhost:8080/events/${category}`);
+                    setResults(response.data);
+                } else {
+                    // Perform search query
+                    const query = new URLSearchParams(location.search).get("query");
+                    if (query) {
+                        const response = await axios.get("http://localhost:8080/search", {
+                            params: { query },
+                        });
+                        setResults(response.data);
                     }
-                );
-                setResults(response.data);
+                }
             } catch (error) {
-                console.error("Error fetching search results:", error);
+                console.error("Error fetching data:", error);
             }
         };
 
-        if (query) {
-            fetchResults();
-        }
-    }, [location.search]);
+        fetchData();
+    }, [category, location.search]);
+
+    if (!results.length) {
+        return <h1>No results found</h1>;
+    }
+
 
     return (
         <>

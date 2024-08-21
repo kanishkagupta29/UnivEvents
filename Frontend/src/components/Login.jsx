@@ -1,9 +1,9 @@
 import React from "react";
-
+import './Styles.css';
 function Login(){
     return (
-    <div className="outer-login">
-      <h1>Login</h1>
+    <div className="outer-login" style={{backgroundColor:"white"}}>
+      <h1 style={{marginLeft:'47%'}}>Login</h1>
       <div className="signup-page">
         <div className="form">
           <form>

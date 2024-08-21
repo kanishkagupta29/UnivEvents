@@ -1,0 +1,175 @@
+#root{
+    background-color:#E7E8D8;
+  }
+  .top-bar{
+    background-color: #021526 ;
+    margin-top: -2em;
+    height: 6em;
+  }
+  .title{
+    color: rgb(255, 255, 255);
+    margin-top: -2em;
+    padding-top: 3%;
+    padding-left: 7%;
+    font-size: 14px;
+    border-radius: 6px;
+    border:none;
+  }
+  /* h1{
+    margin-top: 2em;
+  } */
+   .mb-3{
+    padding-left: 69%;
+    border-radius: 6px;
+    border:none;
+    /* font-size: 20px; */
+    height: 35px;
+    /* width: 40px; */
+   }
+  .event-image{
+    margin-top: 2em;
+    margin-left: 2em;
+    padding: top 2%;
+   padding-bottom: 15%;
+   margin-bottom: 25%;
+    
+  
+  }
+  .event-name{
+    margin-top: 1%;
+    margin-left: 2em;
+    padding-top: 1%;
+    background-color: white;
+    padding-bottom: 1%;
+    padding-left: 10%;
+    margin-right: 4%;
+    color: #021526;
+    width: 205vh;
+    height: 20vh;
+  }
+.event-subtitle{
+    padding-left: 20px;
+}
+
+  .image-box{
+    margin-top: 2em;
+    margin-left: 5em;
+    background-color: white;
+    margin-right: 3.2em;
+    /* margin-bottom: 120px; */
+    padding-bottom: 120px;
+  }
+  .box {
+    width: 100px;
+    height: 50px;
+    background-color: #f0f0f0; /* Light gray background */
+    border: 2px solid #ccc; /* Gray border */
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /*Center the text vertically*/
+    /* margin: 20px auto; Center the box on the page */
+    /* padding: 5px 10px; */
+    margin-left: 600px;
+  }
+  
+  .box-text {
+    
+    color: #333; /* Dark gray text color */
+    text-align: center; /* Center text */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    padding: 4px 4px; /* Padding inside the box */
+    /* border-radius: 4px; Rounded corners */
+    text-align: center; /* Center text horizontally */
+    text-transform: uppercase; /* Uppercase letters */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    /* margin-left: 10px; Space between box and other elements */
+    height: 60px;
+    width: 120px;
+  }
+  .inline-container {
+    display: flex; /* Makes the container a flexbox */
+    align-items: center; /* Aligns items vertically in the center */
+  }
+  
+  .inline-container h1 {
+    margin: 0; /* Remove default margin of h1 to avoid misalignment */
+    font-size: 24px; /* Adjust font size as needed */
+  }
+  .ticket-button{
+    background-color: green;
+    color: white ;
+    padding: 4px 4px;
+    margin-left: 40px;
+    width: 140px;
+    height: 65px;
+    font-size: 18px ; /* Font size */
+    padding: 5px 10px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  
+    
+  }
+  .venue-name {
+    display: flex;
+    gap: 800px; /* Adjust this value to control the space between date and location */
+  }
+  .date,.venue-name,.description,.location{
+    margin-left: 20px;
+  }
+  .describe{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .organiser{
+    margin-left: 50px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-right: 30%;
+    margin-right: 50%;
+    width: 120vh;
+  }
+
+  .organise{
+    background-color:#697565;
+    
+    font-size: 16px; /* Font size */
+
+    padding: 10px 20px; /* Padding for the button */
+     /* Remove default border */
+    border-radius: 5px;
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-left: 15px;
+    width: 150px;
+    color: rgb(255, 255, 255);
+    
+    /* margin-left: 150px; */
+  }
+  .follow{
+    margin-left: 270px;
+  }
+  .contact{
+    margin-left: 20px;
+  }
+  .black{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: black;
+    /* margin-top: -30px; */
+  }
+  .crowd-image{
+    padding-top: 20px;
+  }
+  .head-name{
+    padding-left: 20px;
+    padding-bottom: 2.4%;
+  
+  }

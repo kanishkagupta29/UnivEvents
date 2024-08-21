@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+// import './Styles.css';
+// import './createeventstyle.css';
 export default function CreateEvent() {
     const [formData, setFormData] = useState({
         title: "",
@@ -52,7 +53,7 @@ export default function CreateEvent() {
                     className="needs-validation"
                     noValidate
                 >
-                    <div className="mb-3">
+                    <div className="mb-3 " style={{display:'contents'}}>
                         <label htmlFor="title" className="form-label">
                             Title
                         </label>
@@ -68,7 +69,7 @@ export default function CreateEvent() {
                         <div className="valid-feedback">Looks good!</div>
                     </div>
 
-                    <div className="mb-3">
+                    <div className="mb-3 mt-5" style={{display:'contents'}}>
                         <label htmlFor="description" className="form-label">
                             Description
                         </label>
@@ -85,7 +86,7 @@ export default function CreateEvent() {
                         </div>
                     </div>
 
-                    <div className="mb-3">
+                    <div className="mb-3 " style={{marginTop:'50px',display:'contents'}} >
                         <label htmlFor="image" className="form-label">
                             Image URL
                         </label>
@@ -101,7 +102,7 @@ export default function CreateEvent() {
                     </div>
 
                     <div className="row">
-                        <div className="mb-3 col-md-4">
+                        <div className="mb-3 col-md-4 " style={{display:'contents'}}>
                             <label htmlFor="date" className="form-label">
                                 Date
                             </label>
@@ -118,7 +119,7 @@ export default function CreateEvent() {
                             </div>
                         </div>
 
-                        <div className="mb-3 col-md-8">
+                        <div className="mb-3 col-md-8 mt-4 " style={{display:'contents'}}>
                             <label htmlFor="category" className="form-label">
                                 Category
                             </label>
@@ -137,8 +138,8 @@ export default function CreateEvent() {
                         </div>
                     </div>
 
-                    <div className="mb-3">
-                        <label htmlFor="location" className="form-label">
+                    <div className="mb-3" style={{display:'contents'}}>
+                        <label htmlFor="location" className="form-label"> 
                             Location
                         </label>
                         <input
@@ -155,7 +156,7 @@ export default function CreateEvent() {
                         </div>
                     </div>
 
-                    <div className="mb-3">
+                    <div className="mb-3 mt-5" style={{display:'contents'}}>
                         <label htmlFor="organisedBy" className="form-label">
                             Organised By
                         </label>

@@ -18,6 +18,7 @@ function App() {
      <Routes>
        <Route path="/" element={<Home/>}/>
        <Route path="/events/:eventid" element={<Eventspage/>} />
+       <Route path="/eventsbycategory/:category" element={<SearchResults/>}/>;
        {/* <Route path='./carousel' element={<Carousel/>}/> */}
        <Route path="/signup" element={<Signup/>}/>
        <Route path="/login" element={<Login/>}/>

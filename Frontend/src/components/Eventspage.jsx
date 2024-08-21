@@ -1,11 +1,12 @@
 // import './App.css'
+import "./eventstyle.css";
 import React from 'react'
 import { Col, Container ,Image, Row,Button,Form,InputGroup} from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import { useState,useEffect } from 'react';
 import carddata from '../../public/list.json';
 import axios from "axios";
-// import 'Styles.css';
+// import './Styles.css';
 import Navbarscroll from './Navbarscroll';
 import Footer from './Footer';
 const Eventspage=()=>{
@@ -58,27 +59,36 @@ const Eventspage=()=>{
      
       <Row sm={2}>
         <Col sm={3}>
-        <div class="event-name inline-container" style={{borderColor:'black'}}>
-        <Image src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?cs=srgb&dl=pexels-wolfgang-1002140-2747449.jpg&fm=jpg" height={"80"} width={"80"} roundedCircle />
-          <h1 className='head-name' >{event.name}</h1>
-          <p className="box box-text inline-box">FREE</p>
-          <Button variant="primary" className='ticket-button inline box'>Get Tickets</Button>
-        </div>
-        <div class="image-box" style={{width:'100vw'}}>
-        <Image class="event-image " src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?cs=srgb&dl=pexels-wolfgang-1002140-2747449.jpg&fm=jpg" height={"400px"} width={"100%"}  />
-        <h3 className='name'>EVENT NAME : {event.name}</h3>
-        <h3 className='venue'>
-  <span className='date'>{event.date}</span>
-  <span className='location'>{event.location}</span>
-</h3>
-        <h4 className='description'>Event Description</h4>
-        <p className='describe'>{event.description}</p>
+        <div className="event-name inline-container" style={{ borderColor: 'black' }}>
+    <Image src={event.image} height={"80"} width={"80"} roundedCircle />
+    <div>
+        <h1 className="head-name"  style={{ fontFamily: 'Georgia, sans-serif',fontWeight:'bold' }}>{event.title}</h1>
+        <h4 className="event-subtitle">{event.organisedBy}</h4> {/* New line of text */}
+    </div>
+    <p className="box box-text inline-box">FREE</p>
+    <Button variant="primary" className="ticket-button inline box">Get Tickets</Button>
+</div>
+
+        <div class="image-box " style={{width:'90vw'}}>
+        <Image class="event-image" src={event.image} height={"400px"} width={"100%"}  />
+        <br/>
+        <p></p>
+        <h1></h1>
+        <h3 className='name' style={{ fontFamily: 'Georgia, sans-serif',fontWeight:'bold' }}>EVENT NAME : {event.title}</h3>
+        
+        <h3 className='venue-name' style={{ fontFamily: 'Georgia, sans-serif',fontWeight:'bold' }}>EVENT VENUE :</h3>
+  <h4 className='date mt-4' >DATE: {event.date}</h4>
+  <h4 className='location'>LOCATION : {event.location}</h4>
+  <div className='mt-3 '></div>
+        <h4 className='description' style={{ fontFamily: 'Georgia, sans-serif',fontWeight:'bold' }}>EVENT DESCRIPTION : </h4>
+       <h1></h1>
+        <h5 className='describe'>{event.description}</h5>
         
 </div>
 <div className='image-box organiser '>
 <h3 >Hosted By</h3>
 <div className='inline-container'>
-<h4>{event.organiser}</h4>
+<h4>{event.organisedBy}</h4>
 <Button className='organise inline-block follow'>Follow</Button>
 <Button className='organise contact'>Contact</Button>
 </div>

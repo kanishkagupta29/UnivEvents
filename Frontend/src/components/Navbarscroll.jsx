@@ -60,7 +60,7 @@ function Navbarscroll() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
             />
-            <Button type="submit" variant="light" style={{borderRadius:'1rem'}}>Search</Button>
+            <Button type="submit" variant="light" style={{borderRadius:'1rem',backgroundColor:'black'}}>Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

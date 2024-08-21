@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import cardData from '../../public/list.json';
 import { Link } from 'react-router-dom';
 import axios from "axios";
+// import './Styles.css';
+import './cardsstyle.css';
 const Cards = () => {
   const [cards, setCards] = useState([]);
 
@@ -25,31 +27,40 @@ const Cards = () => {
   ))};
   return (
     <div>
-      <div className="card">    
-        <div className="row">
-          {c.map((card) => (
-            
-            <div className="col-sm-4 " key={card.id}>
-              <Link to={`/events/${card._id}`}>
-              
-              <div className={`panel panel-${card.id % 3 === 1 ? 'primary' : card.id % 3 === 2 ? 'danger' : 'success'} `}>
-                <div className="panel-heading">{card.heading}</div>
-                <div className="panel-body">
-                  <img src={card.imgSrc} className="img-responsive" style={{ width: '100%' }} alt="Image" />
-                </div>
-                <div className="panel-footer">
-                  <h6>Name: {card.name}</h6>
-                  <h6>Date: {card.date}</h6>
-                  <h6>Description: {card.description}</h6>
-                </div>
-              </div>
-              </Link>
+       <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 mt-3 p-5">
+                {c.map((card) => (
+                    <a href={`/events/${card._id}`} class="listing-link">
+                        <div class="card col listing-card mb-5" style={{borderRadius:'8px',border:'none'
+                        }}>
+                            <img
+                                src={card.image}
+                                className="card-img-top img"
+                                alt={card.title}
+                            />
+                            <div class="card-img-overlay"></div>
+                            <div class="card-body">
+                                <h6 className="card-title">{card.title}</h6>
+                                <p className="card-text">
+                                    {card.description.length > 100
+                                        ? card.description.slice(0, 80) + "..."
+                                        : card.description}
+                                </p>
+                                <p>
+                                    <strong>Date:</strong>{" "}
+                                    {new Date(card.date).toLocaleDateString()}
+                                    <br />
+                                    <strong>Location:</strong> {card.location}
+                                    <br />
+                                    <strong>Category:</strong> {card.category}
+                                    <br />
+                                    <strong>Organised By:</strong>{" "}
+                                    {card.organisedBy}
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                ))}
             </div>
-            
-          ))}
-        </div>
-      </div>
-      <br />
     </div>
   );
 };
